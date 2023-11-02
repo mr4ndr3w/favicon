@@ -55,6 +55,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    credits       Int       @default(5)
 }
 
 model VerificationToken {
@@ -63,4 +64,17 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+
+
+model Icon {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    userId    String
+    image     String?
+    style     String?
+    shape     String?
+    color     String?
+    prompt    String
 }
