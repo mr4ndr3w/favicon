@@ -1,6 +1,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useBuyCredits } from "~/hooks/useBuyCredits";
 import { api } from "~/utils/api";
+import { Analytics } from '@vercel/analytics/react';
 import { Button } from "./Button";
 import { PrimaryLink } from "./PrimaryLink";
 
@@ -16,6 +17,7 @@ export function Header() {
 
   return (
     <header className="dark:bg-gray-900">
+    <Analytics />
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <img src="/public/favicon.ico" className="h-16 w-auto"/>
         <PrimaryLink href="/">FavIcon</PrimaryLink>
