@@ -5,7 +5,7 @@ import { buffer } from "micro";
 import { prisma } from "~/server/db";
 
 const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
-  apiVersion: "2023-08-16",
+  apiVersion: "2022-11-15"
 });
 
 export const config = {
