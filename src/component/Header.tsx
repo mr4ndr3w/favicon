@@ -19,7 +19,6 @@ export function Header() {
     <header className="dark:bg-gray-900">
     <Analytics />
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <img src="/public/favicon.ico" className="h-16 w-auto"/>
         <PrimaryLink href="/">FavIcon</PrimaryLink>
         <ul className="flex gap-4">
           <li>
