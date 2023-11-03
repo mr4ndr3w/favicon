@@ -4,9 +4,7 @@ import { env } from "~/env.mjs";
 import { buffer } from "micro";
 import { prisma } from "~/server/db";
 
-const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
-  apiVersion: "2022-11-15"
-});
+const stripe = require('stripe')(env.STRIPE_SECRET_KEY);
 
 export const config = {
   api: {

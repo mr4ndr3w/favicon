@@ -3,9 +3,7 @@ import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
 import Stripe from "stripe";
 import { env } from "~/env.mjs";
 
-const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
-  apiVersion: "2022-11-15"
-});
+const stripe = require('stripe')(env.STRIPE_SECRET_KEY);
 
 export const checkoutRouter = createTRPCRouter({
   createCheckout: protectedProcedure.mutation(async ({ ctx }) => {
