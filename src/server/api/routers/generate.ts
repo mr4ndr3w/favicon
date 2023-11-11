@@ -26,9 +26,10 @@ async function generateIcon(prompt: string, numberOfIcons = 1) {
     return new Array<string>(numberOfIcons).fill(b64Image);
   } else {
     const response = await openai.images.generate({
+      model: "dall-e-3",
       prompt,
       n: numberOfIcons,
-      size: "512x512",
+      size: "1024x1024",
       response_format: "b64_json"
     });
     return response.data.data.map((result) => result.b64_json || "");
