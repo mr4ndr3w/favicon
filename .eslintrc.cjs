@@ -17,6 +17,7 @@ const config = {
   '@typescript-eslint/no-unsafe-call':'off',
   '@typescript-eslint/no-var-requires':'off',
   '@typescript-eslint/require-await':'off',
+  '@typescript-eslint/no-unsafe-member-access':'off',
   '@typescript-eslint/no-unsafe-return':'off',
     // These opinionated rules are enabled in stylistic-type-checked above.
     // Feel free to reconfigure them to your own preference.
