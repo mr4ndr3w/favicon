@@ -13,6 +13,7 @@ const config = {
   rules: {
       '@typescript-eslint/no-unsafe-assignment': 'off',
   '@typescript-eslint/no-explicit-any': 'off',
+  '@typescript-eslint/no-unsafe-member-access':'off',
     // These opinionated rules are enabled in stylistic-type-checked above.
     // Feel free to reconfigure them to your own preference.
     "@typescript-eslint/array-type": "off",
